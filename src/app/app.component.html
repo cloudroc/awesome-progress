@@ -1,0 +1,87 @@
+<div style="text-align:center">
+  <h3>
+    {{ title }}
+  </h3>
+  <button (click)="plus()">增加</button>
+  <button (click)="sub()">减少</button>
+</div>
+<ul >
+  <li>
+    <h4>圆形进度条</h4>
+    <awesome-progress 
+      type="circle"
+      width="125"
+      reverse = "false"
+      percentage={{percent}} 
+      rounded = "true"
+      text = "占比{{percent}}%"
+      >
+    </awesome-progress>
+
+    <awesome-progress 
+      type="circle"
+      width="125"
+      strokeColor = "#FF8080"
+      trackColor = "#e5e9f2"
+      reverse = "true"
+      percentage={{percent}} 
+      rounded = "false"
+      text = "占比{{percent}}%"
+      duration = "1.2"
+      >
+    </awesome-progress>
+  </li>
+  <li>
+    <h4>线形进度条</h4>
+    <awesome-progress 
+      type="line"
+      strokeWidth="16"
+      percentage={{percent}} 
+      rounded = "true"
+      text = "占比{{percent}}%"
+      >
+    </awesome-progress>
+    <br>
+    <div style="width:100%">
+    <awesome-progress 
+      type="line"
+      strokeWidth="14"
+      strokeColor = "#24006B"
+      trackColor = "#e5e9f2"
+      percentage={{percent}} 
+      rounded = "true"
+      text = "占比{{percent}}%"
+      isTextInside = "false"
+      duration = "1.5"
+      >
+    </awesome-progress>
+  </div>
+    <br>
+    <awesome-progress 
+      type="line"
+      strokeWidth="6"
+      strokeColor = "#B30000"
+      trackColor = "#e5e9f2"
+      percentage={{percent}} 
+      rounded = "true"
+      isTextInside = "false"
+      duration = "1.5"
+      >
+    </awesome-progress>
+
+    <br>
+    <awesome-progress 
+      type="line"
+      strokeWidth="6"
+      strokeColor = "#AA80FF"
+      trackColor = "#e5e9f2"
+      percentage={{percent}} 
+      rounded = "false"
+      isTextInside = "false"
+      duration = "0.8"
+      >
+    </awesome-progress>
+  </li>
+  
+</ul>
+
